@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  google-assistant-relay:
+    image: googlerelay
+    container_name: "google-assistant-relay"
+    ports:
+      - "3185:3000"
+    volumes:
+      - "./tokens:/assistant-relay/server/configurations/tokens"
+      - "./secrets:/assistant-relay/server/configurations/secrets"
+      - "./config:/assistant-relay/bin"
